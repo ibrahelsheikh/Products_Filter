@@ -15,4 +15,7 @@ add_executable(Products_Filter
         Specifier/ColorSpecifier.h
         Specifier/LessWeightSpecifier.h
         Specifier/Specifier.h
-        main.cpp)
+        main.cpp
+        Specifier/AndSpecifier.h
+        Specifier/OrSpecifier.h
+)

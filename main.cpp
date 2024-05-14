@@ -12,6 +12,8 @@ https://refactoring.guru/design-patterns/strategy
 #include "./Filter/BetterFilter.h"
 #include "./Specifier/ColorSpecifier.h"
 #include "./Specifier/LessWeightSpecifier.h"
+#include "./Specifier/AndSpecifier.h"
+#include "./Specifier/OrSpecifier.h"
 
 #include <vector>
 
@@ -42,11 +44,17 @@ int main() {
     r.report_all(lightweight_products);
 
     //get a list of products that have a blue('b') color and a weight less than 20
+    vector<Product> blue_lightweight_products =
+            filter.filterby(all_products, new AndSpecifier(new ColorSpecifier('b'), new LessWeightSpecifier(20)));
     cout << "blue lightweight products: \n";
+    r.report_all(blue_lightweight_products);
     //Do It Yourself
 
     //get a list of products that have a green('g') color or a weight less than 20
+    vector<Product> green_or_lightweight_products =
+            filter.filterby(all_products, new OrSpecifier(new ColorSpecifier('g'), new LessWeightSpecifier(20)));
     cout << "green or lightweight products: \n";
+    r.report_all(green_or_lightweight_products);
     //Do It Yourself
 
     return 0;
