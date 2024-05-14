@@ -1,0 +1,3 @@
+F:/Products Filter/cmake-build-debug/CMakeFiles/Products_Filter.dir
+F:/Products Filter/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/Products Filter/cmake-build-debug/CMakeFiles/rebuild_cache.dir
